@@ -1,0 +1,43 @@
+.CountDownSection {
+  background-color: $color_1;
+  padding-bottom: 100px;
+  //   padding: 100px 0;
+
+  .wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    justify-items: center;
+    width: fit-content;
+    margin: auto;
+    gap: 20px;
+
+    .CountDownIem {
+      background-color: $color_yellow_1;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      @include flexCenter;
+      flex-direction: column;
+      border-radius: 10px;
+      //   box-shadow: $color_yellow_1 0px 2px 5px 0px;
+
+      border: 2px solid $color_yellow_2;
+      p {
+        font-size: 40px;
+        font-weight: bold;
+        color: $color_1;
+      }
+
+      small {
+        // color: white;
+        // font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    .wrap {
+      grid-template-columns: repeat(2, 130px);
+    }
+  }
+}

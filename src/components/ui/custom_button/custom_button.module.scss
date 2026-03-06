@@ -1,0 +1,43 @@
+.CustomButton {
+  background: $gradient-warm;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 15px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: $transition-smooth;
+  box-shadow: 0 8px 20px rgba(139, 21, 56, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 180px;
+  justify-content: center;
+  width: 100%;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(139, 21, 56, 0.4);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  &.submitting {
+    background: $gradient-gold;
+    color: var(--text-color-dark);
+  }
+
+  .spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
